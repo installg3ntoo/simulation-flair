@@ -48,14 +48,14 @@ def main():
             if choice == 1:
                 x = int(input("Enter Room number: "))
                 y = int(input("Enter Floor number: "))
-                sim.add_zombies(x, y)
+                sim.add_zombies(room_number=x, floor_number=y)
                 print("\033[H\033[J")
                 print("Zombies added")
 
             elif choice == 2:
                 x = int(input("Enter Room number: "))
                 y = int(input("Enter Floor number: "))
-                sim.block_room(x, y)
+                sim.block_room(room_number=x, floor_number=y)
                 print("\033[H\033[J")
                 print("Room blocked")
 
@@ -70,7 +70,7 @@ def main():
             elif choice == 5:
                 x = int(input("Enter Room number: "))
                 y = int(input("Enter Floor number: "))
-                sim.reset_sensor(x,y)
+                sim.reset_sensor(room_number=x, floor_number=y)
             elif choice == 6:
                 sim.update()
                 print("\033[H\033[J")
