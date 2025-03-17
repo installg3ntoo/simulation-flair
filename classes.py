@@ -254,7 +254,7 @@ class Simulation:
                         except IndexError:
                             continue
 
-                        if new_room.visited or new_room.blocked:
+                        if new_room.visited or new_room.blocked or new_room.has_zombies:
                             continue
                         else:
                             new_room.has_zombies = True
